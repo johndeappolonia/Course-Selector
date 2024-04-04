@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Final Exam</title>
+    <link rel="stylesheet" href="css/final.css" />
+    <script src="js/final.js"></script>
+</head>
+
+<body>
+    <div class="mainBorder">
+        <header>
+            <h2>Declaration</h2>
+            <p>I declare that this test is my own work in accordance with Seneca Academic Policy. No part of this work
+                has been copied manually or electronically from any other source
+                (including 3rd party web sites) or distributed to other students. I acknowledge that by beginning this
+                test, I will abide by the above.
+            </p>
+            <p><b>Name: </b><u>John De Appolonia</u> <b>Student Number: </b><u>101283208</u></p>
+            <hr>
+        </header>
+
+        <h2>Course Information:</h2>
+        <input type="text" placeholder="Enter a course code" style="width: 180px;" id="courseCode">
+        <button id="searchCode" onclick="search()">Search by Course Code</button>
+        <button id="clearSearch" onclick="clearTable()">Clear Search Result</button>
+        <br>
+        <table class="outputTable" style="display: none;" id="cTable">
+            <thead>
+                <tr>
+                    <th style="border: 2px solid blue;">Course Code</th>
+                    <th style="border: 2px solid blue;">Course Name</th>
+                    <th style="border: 2px solid blue;">Course Outline</th>
+                </tr>
+            </thead>
+            <tbody id="t-rows">
+            </tbody>
+        </table>
+        <br><br>
+
+
+
+        <form id="form" method="post" action="https://httpbin.org/post">
+
+            <div class="otherBorder">
+
+                <p>Course Registration</p><br><br>
+                <label>Program:</label>
+                <input type="text" value="BSD" readonly><br><br>
+
+                <label><i style="color: red;">*</i>Student<br>Name:</label>
+                <input type="text" placeholder="Enter name including only Alphabet, apostrophe and space" size="48"
+                    id="studentName" required onchange="studentNameCheck()">
+                <span id="studentNameError"></span><br><br>
+
+                <label><i style="color: red;">*</i>Student<br>Number:</label>
+                <input type="text" id="sNumber" min="210000" max="219999" required onchange="studentNumCheck()">
+                <span id="sNumError"></span><br>
+
+                <label>Semester:</label>
+                <label for="winter">Winter</label>
+                <input type="radio" id="Winter" name="semester">
+                <label for="Summer">Summer</label>
+                <input type="radio" id="Summer" name="semester">
+                <label for="Fall">Fall</label>
+                <input type="radio" id="Fall" name="semester"><br><br>
+
+                <label>Courses:</label>
+                <select name="courses" size="3" multiple>
+                    <option value="BTP100">BTP100</option>
+                    <option value="BTI225" selected>BTI225</option>
+                    <option value="BTI325l">BTI325l</option>
+                    <option value="BTI425"> BTI425</option>
+                </select><br><br>
+
+                <label>Note:</label>
+                <textarea rows="2" cols="30"></textarea><br><br>
+
+                <input type="submit" value="Register" id="submit" onclick="fullFormCheck()">
+                <input type="reset" value="Reset">
+                <span id="submitError"></span>
+
+            </div>
+        </form>
+
+    </div>
+
+
+    <mark>
+        <script> var dt = new Date(document.lastModified);
+            document.write('This page was last updated on ' + dt.toLocaleString());
+        </script>
+    </mark>
+
+</html>
+</body>

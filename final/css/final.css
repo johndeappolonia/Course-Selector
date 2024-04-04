@@ -1,0 +1,29 @@
+.mainBorder {
+    text-align: left;
+    margin:auto;
+    padding: 50px;
+    width:70%;
+    border: 3px solid purple;
+    background-color: rgb(252, 252, 249);
+}
+
+.otherBorder {
+    text-align: left;
+    border: 3px solid grey;
+    background-color: bisque;
+    color: blue;
+}
+
+.outputTable {
+    width: 100%;
+    border-collapse: separate;
+    border: 2px solid blue;
+    border-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+td {
+    border: 2px solid blue;
+}
+
+  
